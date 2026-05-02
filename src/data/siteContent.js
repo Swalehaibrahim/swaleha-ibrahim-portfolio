@@ -1,5 +1,6 @@
 const unsplash = (id, size = 'w=1400&q=80') =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&${size}`;
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export const navLinks = [
   { label: 'Home', href: '#home' },
@@ -22,7 +23,7 @@ export const profile = {
   tagline: 'Designing Spaces That Reflect Elegance',
   subtext:
     'I create functional, aesthetic, and personalized spaces that reflect style, comfort, and purpose. From concept to execution, I focus on transforming interiors into elegant and practical environments.',
-  portrait: '/images/swaleha-about.jpeg',
+  portrait: publicAsset('images/swaleha-about.jpeg'),
   bio: [
     'I believe great interior design balances beauty and functionality. Every space tells a story, and my goal is to create interiors that reflect personality, comfort, and purpose.',
     "I focus on thoughtful layouts, elegant materials, and modern aesthetics to transform spaces into inspiring environments. Whether it's a home, office, or commercial space, I design with attention to detail and lasting impact.",
